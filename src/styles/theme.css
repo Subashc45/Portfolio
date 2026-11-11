@@ -1,0 +1,198 @@
+/* Forest green + amber + cream palette (loaded last, overrides base/sections) */
+:root {
+  --cream: #f6ead6; --green: #2d5a3d; --amber: #ffa800; --coral: #f2542d; --ink: #0e0e0e;
+  --bg: var(--cream); --text: var(--ink); --muted: #4d4d45; --border: rgba(0,0,0,.14);
+  --surface: rgba(255,255,255,.55); --grad: linear-gradient(var(--coral), var(--coral));
+  --head: "Fraunces", Georgia, serif;
+}
+body { background: var(--cream); color: var(--ink); }
+h1, h2, h3, .logo { font-weight: 800; letter-spacing: -.01em; }
+.grad { background: none; color: var(--coral); -webkit-text-fill-color: var(--coral); animation: none; }
+.blob { opacity: .22; filter: blur(120px); }
+.b1 { background: var(--amber); } .b2 { background: var(--green); } .b3 { background: var(--coral); }
+.glass { backdrop-filter: none; -webkit-backdrop-filter: none; }
+.card:hover { border-color: var(--coral); box-shadow: 0 18px 36px -20px rgba(0,0,0,.45); }
+
+/* nav + buttons */
+.nav.scrolled { background: rgba(246,234,214,.88); }
+.logo span { color: var(--coral); }
+.links a:not(.btn) { color: var(--ink); }
+.links a:not(.btn):hover, .links a.active { color: var(--ink); }
+.links a:not(.btn)::after { background: var(--coral); }
+.burger { color: var(--ink); }
+.btn-primary { background: var(--amber); color: var(--ink); box-shadow: 0 8px 20px -10px rgba(255,168,0,.9); }
+.btn-primary:hover { box-shadow: 0 12px 26px -8px rgba(255,168,0,1); }
+.btn-ghost { background: transparent; color: var(--ink); border-color: var(--ink); }
+.btn-ghost:hover { background: var(--ink); color: var(--cream); border-color: var(--ink); }
+@media (max-width: 860px) { .links { background: var(--cream); } }
+
+/* hero */
+.hello, .lead { color: var(--muted); }
+.role { color: var(--green); }
+.caret { background: var(--coral); }
+.socials a { border-color: rgba(0,0,0,.25); background: transparent; color: var(--ink); }
+.socials a:hover { background: var(--coral); border-color: var(--coral); color: #fff; }
+.code-card { background: var(--ink); border-color: var(--ink); }
+pre { color: #ffc94d; }
+.chip { border: 0; color: var(--ink); background: var(--amber); }
+.c2 { background: var(--coral); color: #fff; } .c3 { background: var(--green); color: var(--cream); }
+
+/* section titles */
+.sec-title h2::after { background: var(--coral); }
+.sec-title p { color: var(--muted); }
+
+/* full-width green sections */
+#about, #projects { background: var(--green); color: var(--cream); box-shadow: 0 0 0 100vmax var(--green); clip-path: inset(0 -100vmax); }
+#about h2, #projects h2 { color: var(--amber); }
+#about .sec-title p, #projects .sec-title p { color: rgba(246,234,214,.75); }
+.about-text { color: var(--cream); }
+#about .glass { background: rgba(255,255,255,.08); border-color: rgba(255,255,255,.2); }
+.hl svg { color: var(--amber); }
+
+/* skills (cream) */
+.skill { background: rgba(255,255,255,.6); border-left-color: var(--coral); }
+.skill:hover { background: #fff; }
+.ico { background: var(--amber); color: var(--ink); }
+
+/* projects (cream cards on green) */
+#projects .proj { background: var(--cream); color: var(--ink); border-color: var(--cream); }
+.shot { background: linear-gradient(135deg, var(--amber), var(--coral)); }
+.shot-ph span { color: var(--ink); opacity: .35; }
+.proj-body p { color: var(--muted); }
+.tags li { background: var(--ink); color: var(--cream); border-color: var(--ink); }
+
+/* timeline */
+.timeline::before { background: var(--coral); }
+.node { background: var(--amber); border-color: var(--coral); border-radius: 3px; transform: rotate(45deg); box-shadow: none; left: -2.3rem; }
+.timeline p { color: var(--muted); }
+
+/* contact (ink card) */
+.contact { background: var(--ink); border-color: var(--ink); color: var(--cream); }
+.contact h2 { color: var(--amber); }
+.contact p { color: rgba(246,234,214,.75); }
+.contact .socials a { color: var(--cream); border-color: rgba(246,234,214,.3); }
+input, textarea { background: rgba(255,255,255,.06); border-color: rgba(246,234,214,.25); color: var(--cream); }
+input::placeholder, textarea::placeholder { color: rgba(246,234,214,.55); }
+input:focus, textarea:focus { border-color: var(--amber); box-shadow: 0 0 0 3px rgba(255,168,0,.25); }
+.status { color: var(--amber) !important; }
+
+/* footer */
+.footer { background: var(--ink); color: var(--cream); border: 0; margin-top: 0; }
+.footer .socials a { color: var(--cream); border-color: rgba(246,234,214,.3); }
+.foot-inner p, .copy, .foot-inner nav a { color: rgba(246,234,214,.7); }
+.foot-inner nav a:hover { color: var(--amber); }
+
+/* ---- v2: flatter, bolder, closer to the reference ---- */
+:root { --cream: #f8edda; --green: #264d36; --amber: #ffa500; --coral: #ee4f2a; --bg: var(--cream); }
+.bg { display: none; }
+body { background: var(--cream); }
+.glass { background: #fff7e8; border: 1.5px solid var(--ink); }
+.card:hover { box-shadow: 6px 6px 0 var(--ink); transform: translate(-3px, -3px); border-color: var(--ink); }
+.contact:hover { box-shadow: none; transform: none; }
+
+/* hero: amber block behind the code card */
+.hero-visual::before { content: ""; position: absolute; width: 72%; aspect-ratio: 1; background: var(--amber); right: 4%; top: 6%; border-radius: 6px; }
+.code-card { position: relative; z-index: 1; border-radius: 14px; }
+.chip { z-index: 2; border: 1.5px solid var(--ink); }
+
+/* skills */
+.skill { background: transparent; border-left: 0; border-bottom: 1px solid rgba(0,0,0,.15); border-radius: 0; padding: .6rem 0; }
+.skill:hover { background: transparent; transform: translateX(6px); }
+.ico { background: var(--ink); color: var(--amber); border-radius: 50%; }
+.skill-group h3 { color: var(--green); }
+
+/* about on green */
+#about .glass { background: rgba(255,255,255,.07); border: 1.5px solid rgba(248,237,218,.35); }
+#about .card:hover { box-shadow: 6px 6px 0 var(--amber); }
+#projects .proj { border: 0; }
+#projects .proj:hover { box-shadow: 8px 8px 0 var(--amber); }
+
+/* experience as a full-width amber block */
+#experience { background: var(--amber); box-shadow: 0 0 0 100vmax var(--amber); clip-path: inset(0 -100vmax); }
+#experience .sec-title p { color: rgba(14,14,14,.7); }
+#experience .sec-title h2::after { background: var(--ink); }
+#experience .glass { background: var(--cream); border-color: var(--ink); }
+#experience .timeline::before { background: var(--ink); }
+#experience .node { background: var(--coral); border-color: var(--ink); }
+#experience .card:hover { box-shadow: 6px 6px 0 var(--ink); }
+
+/* nav pill + contact */
+.talk { border: 1.5px solid var(--ink); }
+.contact { border: 0; }
+
+/* ---- v3: deep green page ---- */
+:root { --green: #264d36; --green-deep: #1b3a29; --bg: var(--green); --muted: rgba(248,237,218,.78); --dark-text: #4d4d45; }
+body { background: var(--green); color: var(--cream); }
+h1, h2, h3, .logo { color: var(--cream); }
+.sec-title h2, .skill-group h3 { color: var(--amber); }
+.sec-title h2::after { background: var(--coral); }
+.role { color: var(--amber); }
+.grad { color: var(--amber); -webkit-text-fill-color: var(--amber); }
+.logo span, .caret { color: var(--amber); }
+.caret { background: var(--amber); }
+
+/* nav */
+.nav.scrolled { background: rgba(38,77,54,.9); border-color: rgba(248,237,218,.18); }
+.links a:not(.btn) { color: rgba(248,237,218,.8); }
+.links a:not(.btn):hover, .links a.active { color: var(--cream); }
+.links a:not(.btn)::after { background: var(--amber); }
+.burger { color: var(--cream); }
+.talk { border-color: var(--amber); }
+@media (max-width: 860px) { .links { background: var(--green); } }
+
+/* buttons, socials, cards */
+.btn-ghost { color: var(--cream); border-color: var(--cream); }
+.btn-ghost:hover { background: var(--cream); color: var(--green); border-color: var(--cream); }
+.socials a { color: var(--cream); border-color: rgba(248,237,218,.35); }
+.socials a:hover { background: var(--amber); border-color: var(--amber); color: var(--ink); }
+.glass { background: rgba(255,255,255,.06); border: 1.5px solid rgba(248,237,218,.3); }
+.card:hover { box-shadow: 6px 6px 0 var(--amber); border-color: rgba(248,237,218,.3); }
+.code-card { background: var(--ink); border-color: var(--ink); }
+.chip { border-color: var(--ink); }
+
+/* skills */
+.skill { border-bottom-color: rgba(248,237,218,.2); }
+.ico { background: var(--amber); color: var(--ink); }
+
+/* alternating deeper-green bands */
+#about, #projects { background: var(--green-deep); box-shadow: 0 0 0 100vmax var(--green-deep); }
+#about .glass { border-color: rgba(248,237,218,.3); }
+
+/* cream/amber cards keep dark text */
+#projects .proj-body p, #experience .timeline p { color: var(--dark-text); }
+#experience .card, #experience h3 { color: var(--ink); }
+#experience .sec-title h2 { color: var(--ink); }
+#experience .sec-title h2::after { background: var(--ink); }
+
+/* footer + contact stay black */
+.footer { border-top: 1px solid rgba(248,237,218,.15); }
+.contact { border: 1.5px solid rgba(248,237,218,.2); }
+
+/* ---- v4: black Learning Journey ---- */
+#experience { background: var(--ink); box-shadow: 0 0 0 100vmax var(--ink); }
+#experience .sec-title h2 { color: var(--amber); }
+#experience .sec-title h2::after { background: var(--coral); }
+#experience .sec-title p { color: rgba(248,237,218,.7); }
+#experience .glass { background: rgba(255,255,255,.06); border: 1.5px solid rgba(248,237,218,.25); }
+#experience .card, #experience h3 { color: var(--cream); }
+#experience .timeline p { color: rgba(248,237,218,.72); }
+#experience .timeline::before { background: var(--amber); }
+#experience .node { background: var(--coral); border-color: var(--amber); }
+#experience .card:hover { box-shadow: 6px 6px 0 var(--amber); }
+
+/* ---- Learning Journey: black band ---- */
+#experience { background: var(--ink); box-shadow: 0 0 0 100vmax var(--ink); }
+#experience .sec-title h2 { color: var(--amber); }
+#experience .sec-title h2::after { background: var(--coral); }
+#experience .sec-title p { color: rgba(248,237,218,.75); }
+#experience .glass { background: rgba(255,255,255,.06); border-color: rgba(248,237,218,.25); }
+#experience .card, #experience h3 { color: var(--cream); }
+#experience .timeline p { color: rgba(248,237,218,.75); }
+#experience .timeline::before { background: var(--amber); }
+#experience .node { background: var(--amber); border-color: var(--coral); }
+#experience .card:hover { box-shadow: 6px 6px 0 var(--amber); }
+
+/* ---- Projects: green screenshot placeholders instead of amber ---- */
+.shot { background: linear-gradient(135deg, #3a7a52, #1b3a29); }
+.shot-ph span { color: var(--cream); opacity: .6; }
+#projects .proj:hover { box-shadow: 8px 8px 0 var(--ink); }
